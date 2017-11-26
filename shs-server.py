@@ -43,7 +43,7 @@ class DeviceSocketHandler(tornado.websocket.WebSocketHandler):
         logging.info("sending message to %d waiters", len(cls.waiters))
         for waiter in cls.waiters:
             try:
-                waiter.write_message(messsage)
+                waiter.write_message(message)
             except:
                 logging.error("Error sending message", exc_info=True)     
     
